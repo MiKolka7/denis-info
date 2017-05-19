@@ -10,6 +10,14 @@
 		setTimeout(function () {
 			location.reload();
 		}, 5000);
+	  	var el = document.documentElement,
+		    rfs = el.requestFullscreen
+			|| el.webkitRequestFullScreen
+			|| el.mozRequestFullScreen
+			|| el.msRequestFullscreen 
+		    ;
+
+		rfs.call(el);
 	</script>
 	<style>
 		h1 {
