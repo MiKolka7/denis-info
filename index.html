@@ -8,6 +8,7 @@
 	<title>Document</title>
   <script>
 	  	var el = document.documentElement,
+		    h1 = document.querySelector('h1');
 		    rfs = el.requestFullscreen
 			|| el.webkitRequestFullScreen
 			|| el.mozRequestFullScreen
@@ -15,6 +16,9 @@
 		    ;
 
 		rfs.call(el);
+	  	fetch('http://ls.taslife.com.ua/denis.php').then(function (res) {
+			h1.innerHTML = res;
+		});
 	</script>
 	<style>
 		h1 {
@@ -32,13 +36,7 @@
 </head>
 <body>
 
-<!--   <h1>Денис на зустрічі</h1> -->
-<!--   <h1>Денис курить</h1> -->
-  <h1>Денис на місці</h1>
-<!--   <h1>Денис поїхав, буде пізніше</h1> -->
-<!--   <h1>Денис ховається десь в офісі, але не тут)</h1>	 -->
-<!--   <h1>Дениса немає і не буде</h1> -->
-<!-- 	  <h1>Денис робить каву</h1> -->
+  <h1></h1>
 	
 </body>
 </html>
